@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Payoo</title>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="flex justify-center">
+        <!-- phone mockup -->
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <!-- account balance -->
+                <div class="stats shadow">
+                    <div class="stat">
+                      <div class="stat-value" id="current-balance">9400</div>
+                      <div class="stat-desc">Available Balance</div>
+                    </div>
+                </div>
+                <!-- divider -->
+                <div class="divider"></div>
+                <!-- user action button -->
+                 <div class="space-y-2 pl-4">
+                    <button class="btn btn-lg" id="btn-toggle-add-money">Add Money</button>
+                    <button class="btn btn-lg" id="btn-toggle-cash-out">Cash Out</button>
+                    <button class="btn btn-lg" id="btn-toggle-transactions">Transactions</button>
+                 </div>
+                 <!-- divider -->
+                 <div class="divider"></div>
+                 <!-- add money -->
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl" id="show-add-money">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Add Amount</span>
+                            </label>
+                            <input type="text" placeholder="Add Amount" class="input input-bordered" id="input-add-money" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">4-digits PIN</span>
+                            </label>
+                            <input type="password" placeholder="Your PIN" class="input input-bordered" id="input-pin-number" autocomplete="off" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button class="btn btn-primary" id="btn-add-money">Add Money</button>
+                          </div>
+                        </form>
+                </div>
+                 <!-- cash out -->
+                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden" id="show-cash-out">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Withdraw Amount</span>
+                            </label>
+                            <input type="text" placeholder="Withdarw Amount" class="input input-bordered" id="input-cash-out" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">4-digits PIN</span>
+                            </label>
+                            <input type="password" placeholder="Your PIN" class="input input-bordered" id="pin-cash-out" autocomplete="off" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button class="btn btn-primary" id="btn-cash-out">Cash Out</button>
+                          </div>
+                        </form>
+                </div>
+                 <!-- transactions -->
+                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden" id="show-transactions">
+                    <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                        <div class="collapse-title text-xl font-medium">Add Money 5000 tk on 05.08.24</div>
+                        <div class="collapse-content">
+                          <p>You have added 5000 tk <br>on Sunday, 12 september 2024</p>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                        <div class="collapse-title text-xl font-medium">Cash out 400 tk on 05.08.24</div>
+                        <div class="collapse-content">
+                          <p>You have added 5000 tk <br>on Sunday, 12 september 2024</p>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                        <div class="collapse-title text-xl font-medium">Cash out 1500 tk on 05.08.24</div>
+                        <div class="collapse-content">
+                          <p>You have added 5000 tk <br>on Sunday, 12 september 2024</p>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                        <div class="collapse-title text-xl font-medium">Add Money 2600 tk on 05.08.24</div>
+                        <div class="collapse-content">
+                          <p>You have added 5000 tk <br>on Sunday, 12 september 2024</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./js/utilities.js"></script>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/cashOut.js"></script>
+    <script src="./js/features.js"></script>
+</body>
+</html>
