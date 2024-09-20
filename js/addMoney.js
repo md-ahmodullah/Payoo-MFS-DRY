@@ -3,6 +3,11 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
     
     const addMoney = getInputFieldById('input-add-money');
     const pinNumber = getInputFieldById('input-pin-number');
+
+    if (isNaN(addMoney)){
+        alert('Wrong Amount!');
+        return;
+    }
     
     // verify in bad way due to lack of backend knowledge
     if (pinNumber === 1234) {
@@ -17,4 +22,10 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
     }
     document.getElementById('input-add-money').value = '';
     document.getElementById('input-pin-number').value = '';
+
+    const p = document.createElement('p');
+    p.innerText = `Add money ${addMoney} tk on Sunday, 20 August 2024`;
+    p.classList.add("collapse-title", "text-base", "font-medium", "bg-green-700", "text-white");
+
+    document.getElementById('transactions-container').appendChild(p);
 })
